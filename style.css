@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+/* font-family: 'Mulish', sans-serif; */
+
+:root{
+    font-size: 62.5%;
+
+    --blue-header: #065E7C;
+    --blue-footer: #387E96;
+    --white: #FFFFFF;
+    --fonts: #121214;
+    --bg-color-logo: #F4FCFF;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, input{
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--white);
+    line-height: 2.2rem;
+}
+
+#app{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+#title-buttons, main > p, aside{
+    padding: 0 2.8rem;
+}
+
+/* -------- NAV --------- */
+
+header{
+    background: var(--blue-header);
+    padding: 1.2rem 2.8rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    
+}
+
+nav img{
+    width: 4.2rem;
+    border-radius: 50%;
+}
+
+nav img:first-child{
+    background-color: var(--white);
+    padding: .8rem;
+}
+
+nav form{
+    flex: 1;
+}
+
+nav form input{
+    width: 100%;
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+    border-radius: .4rem;
+    background: rgba(255, 255, 255, 0.20);
+    border: none;
+    color: var(--white);
+}
+
+nav form label{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+nav form input::placeholder{
+    color: var(--white);
+    font-weight: 600;
+    line-height: 100%;
+}
+
+/* -------- MAIN --------- */
+
+.grid-template{
+    display: grid;
+    row-gap: 3.4rem;
+}
+
+figure img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: .5rem;
+}
+
+#title-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin: 3.2rem 0;
+}
+
+h1, h2{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.buttons{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.buttons img{
+    background: var(--blue-header);
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+/* -------- ASIDE --------- */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-bottom: 4.2rem;
+}
+
+aside section{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+aside figure{
+    display: grid;
+    grid-template-columns: 15.2rem 1fr;
+    grid-template-rows: 8.4rem;
+    column-gap: 1.6rem;
+
+    align-items: flex-start;
+}
+
+aside h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+aside p{
+    font-size: 1.4rem;
+}
+
+/* -------- FOOTER --------- */
+
+footer{
+    padding: 1.6rem 0;
+    text-align: center;
+    background: var(--blue-header);
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* -------- RESPONSIVIDADE DE TELAS --------- */
+
+@media (min-width: 1024px){
+
+    .container{
+        width: min(121.8rem, 100%);
+        margin: 0 auto;
+}
+
+    .grid-template{
+        grid-template-areas: 
+        "main aside";
+
+        justify-content: center;
+        margin: 4.4rem 0;
+
+        column-gap: 3.4rem;
+    }
+
+    #title-buttons, main > p, aside{
+    padding: 0;
+    }
+
+    main{
+        grid-area: main;
+        max-width: 80rem;
+    }
+
+    #title-buttons{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    aside{
+        grid-area: aside;
+        max-width: 38.4rem;
+    }
+}
