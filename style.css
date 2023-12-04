@@ -52,6 +52,8 @@ nav{
     display: flex;
     align-items: center;
     gap: 2.4rem;
+    width: min(121.8rem, 100%);
+    margin: 0 auto;
     
 }
 
@@ -150,6 +152,8 @@ aside figure{
     column-gap: 1.6rem;
 
     align-items: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 aside h3{
@@ -175,17 +179,16 @@ footer{
 
 @media (min-width: 1024px){
 
-    .container{
-        width: min(121.8rem, 100%);
-        margin: 0 auto;
-}
+    /* .container{
+        
+} */
 
     .grid-template{
         grid-template-areas: 
         "main aside";
 
         justify-content: center;
-        margin: 4.4rem 0;
+        margin: 4.4rem 2rem;
 
         column-gap: 3.4rem;
     }
