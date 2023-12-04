@@ -153,6 +153,9 @@ aside figure{
 
     align-items: flex-start;
     overflow: hidden;
+}
+
+figure p{
     text-overflow: ellipsis;
 }
 
@@ -163,6 +166,11 @@ aside h3{
 
 aside p{
     font-size: 1.4rem;
+}
+
+figcaption p{
+    display: inline-block;
+    text-overflow: ellipsis;
 }
 
 /* -------- FOOTER --------- */
