@@ -219,3 +219,15 @@ footer{
         max-width: 38.4rem;
     }
 }
+
+@media (max-width: 390px){
+    aside figure{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    aside section {
+        gap: 2rem;
+    }
+}
