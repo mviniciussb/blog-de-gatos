@@ -80,6 +80,10 @@ nav form input{
     color: var(--white);
 }
 
+nav form input:focus{
+    outline: 1px solid #02516b9c;
+}
+
 nav form label{
     position: absolute;
     width: 1px;
