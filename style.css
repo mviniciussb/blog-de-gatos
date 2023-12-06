@@ -152,11 +152,10 @@ aside section{
 aside figure{
     display: grid;
     grid-template-columns: 15.2rem 1fr;
-    grid-template-rows: 8.4rem;
+    grid-template-rows: auto;
     column-gap: 1.6rem;
 
     align-items: flex-start;
-    overflow: hidden;
 }
 aside h3{
     font-size: 1.8rem;
@@ -165,6 +164,11 @@ aside h3{
 
 aside p{
     font-size: 1.4rem;
+}
+
+figcaption{
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* -------- FOOTER --------- */
